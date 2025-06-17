@@ -1,0 +1,2614 @@
+/* styles.css */
+
+/* Reset and General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Reset default margins, paddings, and set box-sizing to border-box for consistency */
+}
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    /* Use Arial as the primary font with fallback to sans-serif */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    /* Default text color */
+    line-height: 1.6;
+    /* Line height for better readability */
+    background-color: #f9f9f9;
+    /* Light gray background for the body */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Smooth transition for dark mode changes */
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #2c2c2c;
+    /* Dark gray background for dark mode */
+    color: #e0e0e0;
+    /* Light gray text for dark mode */
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+    background-color: #1a1a1a;
+    /* Darker background for header and footer in dark mode */
+}
+
+body.dark-mode .tap-menu a {
+    color: #e0e0e0;
+    /* Light gray text for navigation links in dark mode */
+}
+
+body.dark-mode .tap-menu a:hover,
+body.dark-mode .tap-menu a.active {
+    color: #fff;
+    /* White text on hover/active in dark mode */
+    background-color: #ff6f61;
+    /* Maintain brand color for hover/active */
+}
+
+body.dark-mode .website-name,
+body.dark-mode .search-icon,
+body.dark-mode .cart-icon {
+    color: #e0e0e0;
+    /* Light gray for icons and logo text in dark mode */
+}
+
+body.dark-mode .search-bar {
+    background: #333;
+    /* Darker background for search bar in dark mode */
+}
+
+body.dark-mode .search-bar input {
+    background: #444;
+    /* Dark input background in dark mode */
+    color: #e0e0e0;
+    /* Light text in dark mode */
+    border-color: #555;
+    /* Darker border in dark mode */
+}
+
+body.dark-mode .hero-content,
+body.dark-mode .blog-header {
+    background: rgba(0, 0, 0, 0.7);
+    /* Darker overlay for better readability in dark mode */
+}
+
+body.dark-mode .review-section,
+body.dark-mode .about-section,
+body.dark-mode .mission-section {
+    background: #333;
+    /* Dark background for sections in dark mode */
+}
+
+body.dark-mode .review-box,
+body.dark-mode .blog-post,
+body.dark-mode .login-container,
+body.dark-mode .timeline-content,
+body.dark-mode .blog-posts,
+body.dark-mode .contact-card,
+body.dark-mode .content-section,
+body.dark-mode .product-card {
+    background: #444;
+    /* Darker background for cards and containers in dark mode */
+    color: #e0e0e0;
+    /* Light text in dark mode */
+}
+
+body.dark-mode .review-box h3,
+body.dark-mode .blog-post-content h2,
+body.dark-mode .timeline-content h2,
+body.dark-mode h2 {
+    color: #fff;
+    /* White headings in dark mode */
+}
+
+body.dark-mode .review-box p.location,
+body.dark-mode .review-box p.comment,
+body.dark-mode .blog-post-content p,
+body.dark-mode .timeline-content p {
+    color: #ccc;
+    /* Lighter gray for secondary text in dark mode */
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    /* White background for header */
+    padding: 20px;
+    /* Padding for header content */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    position: sticky;
+    /* Sticky header on top */
+    top: 0;
+    z-index: 1000;
+    /* Ensure header stays above other content */
+    transition: background-color 0.3s ease;
+    /* Smooth transition for dark mode */
+}
+
+nav {
+    display: flex;
+    /* Flexbox for navigation layout */
+    justify-content: space-between;
+    /* Space between logo, menu, and icons */
+    align-items: center;
+    /* Center items vertically */
+    max-width: 1200px;
+    /* Maximum width for navigation */
+    margin: 0 auto;
+    /* Center the nav */
+}
+
+/* Logo and Website Name */
+.logo-container {
+    display: flex;
+    /* Flexbox for logo and name */
+    align-items: center;
+    /* Center items vertically */
+    gap: 10px;
+    /* Gap between logo and text */
+}
+
+.logo-image {
+    height: 50px;
+    /* Fixed height for logo */
+    width: 50px;
+    /* Fixed width for logo */
+    border-radius: 50%;
+    /* Circular logo */
+    object-fit: cover;
+    /* Ensure image fits within bounds */
+}
+
+.website-name {
+    font-size: 24px;
+    /* Font size for website name */
+    font-weight: bold;
+    /* Bold text */
+    color: #ff6f61;
+    /* Brand color */
+    transition: color 0.3s ease;
+    /* Smooth transition for dark mode */
+}
+
+/* Tap Menu */
+.tap-menu {
+    list-style: none;
+    /* Remove default list styles */
+    display: flex;
+    /* Flexbox for menu items */
+    gap: 30px;
+    /* Gap between menu items */
+    margin: 0;
+    padding: 0;
+    /* Remove default margins and padding */
+}
+
+.tap-menu a {
+    text-decoration: none;
+    /* Remove underline from links */
+    color: #333;
+    /* Default text color */
+    font-weight: bold;
+    /* Bold text */
+    font-size: 16px;
+    /* Font size */
+    transition: color 0.3s ease, background-color 0.3s ease;
+    /* Smooth transition for hover/active */
+    padding: 10px 15px;
+    /* Padding for clickable area */
+    border-radius: 5px;
+    /* Rounded corners */
+    background-color: transparent;
+    /* Transparent background by default */
+}
+
+.tap-menu a:hover {
+    color: #fff;
+    /* White text on hover */
+    background-color: #ff6f61;
+    /* Brand color on hover */
+}
+
+.tap-menu a.active {
+    color: #fff;
+    /* White text when active */
+    background-color: #ff6f61;
+    /* Brand color when active */
+}
+
+/* Icons Container */
+.icons-container {
+    display: flex;
+    /* Flexbox for icons */
+    align-items: center;
+    /* Center icons vertically */
+    gap: 20px;
+    /* Gap between icons */
+}
+
+/* Search Container */
+.search-container {
+    position: relative;
+    /* Relative positioning for search bar */
+}
+
+.search-icon {
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    color: #666;
+    /* Default icon color */
+    font-size: 18px;
+    /* Icon size */
+    transition: color 0.3s ease;
+    /* Smooth transition for hover */
+}
+
+.search-icon:hover {
+    color: #e74c3c;
+    /* Brand color on hover */
+}
+
+.search-bar {
+    display: none;
+    /* Hidden by default */
+    position: absolute;
+    /* Absolute positioning for dropdown */
+    top: 100%;
+    /* Position below icon */
+    right: 0;
+    margin-top: 10px;
+    /* Spacing from icon */
+    background: white;
+    /* White background */
+    padding: 10px;
+    /* Padding inside search bar */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    /* Subtle shadow */
+
+}
+
+.search-bar.active {
+    display: block;
+    /* Show when active */
+}
+
+.search-bar input {
+    padding: 8px 12px;
+    /* Padding inside input */
+    border: 1px solid #ddd;
+    /* Light border */
+    border-radius: 20px;
+    /* Rounded input */
+    width: 200px;
+    /* Fixed width */
+}
+
+/* Search Results */
+.search-results {
+    position: absolute;
+    /* Absolute positioning for results */
+    top: 100%;
+    /* Position below search bar */
+    right: 0;
+    margin-top: 50px;
+    /* Spacing from search bar */
+    background: white;
+    /* White background */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    /* Subtle shadow */
+    width: 300px;
+    /* Fixed width */
+    max-height: 300px;
+    /* Maximum height with scroll */
+    overflow-y: auto;
+    /* Scroll for overflow */
+    display: none;
+    /* Hidden by default */
+}
+
+body.dark-mode .search-results {
+    background: #333;
+    /* Dark background in dark mode */
+}
+
+.search-results.active {
+    display: block;
+    /* Show when active */
+}
+
+.search-result-item {
+    padding: 10px;
+    /* Padding inside result item */
+    border-bottom: 1px solid #eee;
+    /* Light border between items */
+    display: flex;
+    /* Flexbox for image and text */
+    align-items: center;
+    /* Center items vertically */
+    gap: 10px;
+    /* Gap between image and text */
+}
+
+body.dark-mode .search-result-item {
+    border-bottom: 1px solid #555;
+    /* Darker border in dark mode */
+}
+
+.search-result-item:last-child {
+    border-bottom: none;
+    /* Remove border from last item */
+}
+
+.search-result-item img {
+    width: 50px;
+    /* Fixed image width */
+    height: 50px;
+    /* Fixed image height */
+    object-fit: cover;
+    /* Ensure image fits */
+    border-radius: 5px;
+    /* Rounded image corners */
+}
+
+.search-result-item h4 {
+    margin: 0;
+    /* Remove default margin */
+    font-size: 1rem;
+    /* Font size */
+    color: #333;
+    /* Default text color */
+}
+
+body.dark-mode .search-result-item h4 {
+    color: #e0e0e0;
+    /* Light text in dark mode */
+}
+
+.search-result-item p {
+    margin: 0;
+    /* Remove default margin */
+    font-size: 0.9rem;
+    /* Font size */
+    color: #666;
+    /* Default text color */
+}
+
+body.dark-mode .search-result-item p {
+    color: #ccc;
+    /* Lighter gray in dark mode */
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    font-size: 18px;
+    /* Icon size */
+    color: #666;
+    /* Default icon color */
+    transition: color 0.3s ease;
+    /* Smooth transition for hover */
+}
+
+body.dark-mode .dark-mode-toggle {
+    color: #e0e0e0;
+    /* Light gray in dark mode */
+}
+
+.dark-mode-toggle:hover {
+    color: #e74c3c;
+    /* Brand color on hover */
+}
+
+/* Cart Container */
+.cart-container {
+    position: relative;
+    /* Relative positioning for cart count */
+}
+
+.cart-icon {
+    color: #666;
+    /* Default icon color */
+    font-size: 18px;
+    /* Icon size */
+    text-decoration: none;
+    /* Remove underline */
+    transition: color 0.3s ease;
+    /* Smooth transition for hover */
+}
+
+.cart-icon:hover {
+    color: e74#c3c;
+    /* Brand color on hover */
+}
+
+.cart-count {
+    position: absolute;
+    /* Absolute positioning for count */
+    top: -8px;
+    /* Position above icon */
+    right: -8px;
+    /* Position to the right */
+    background: #e74c3c;
+    /* Brand color background */
+    color: white;
+    /* White text */
+    font-size: 12px;
+    /* Font size */
+    width: 18px;
+    /* Fixed width */
+    height: 18px;
+    /* Fixed height */
+    border-radius: 50%;
+    /* Circular shape */
+    display: flex;
+    /* Flexbox for centering */
+    align-items: center;
+    /* Center vertically */
+    justify-content: center;
+    /* Center horizontally */
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('images/bg-pic.jpg');
+    /* Background image for hero */
+    background-size: cover;
+    /* Cover the entire section */
+    background-position: center;
+    /* Center the image */
+    background-attachment: fixed;
+    /* Fixed background */
+    height: 80vh;
+    /* Full viewport height */
+    display: flex;
+    /* Flexbox for centering */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    text-align: center;
+    /* Center text */
+    color: #fff;
+    /* White text */
+}
+
+.hero-content {
+    max-width: 800px;
+    /* Maximum width for content */
+    padding: 20px;
+    /* Padding around content */
+    background: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent overlay */
+    border-radius: 10px;
+    /* Rounded corners */
+}
+
+.hero h1 {
+    font-size: 48px;
+    /* Font size for heading */
+    font-weight: bold;
+    /* Bold text */
+    margin-bottom: 10px;
+    /* Margin below heading */
+}
+
+.hero h2 {
+    font-size: 64px;
+    /* Font size for subheading */
+    font-weight: bold;
+    /* Bold text */
+    margin-bottom: 20px;
+    /* Margin below subheading */
+}
+
+.hero p {
+    font-size: 20px;
+    /* Font size for paragraph */
+}
+
+/* Review Section */
+.review-section {
+    padding: 80px 20px;
+    /* Padding for section */
+    background: url('images/bg-pic.jpg') center/cover no-repeat;
+    /* Background image */
+    text-align: center;
+    /* Center text */
+    color: #fff;
+    /* White text */
+    position: relative;
+    /* Relative positioning for overlay */
+    margin-bottom: 0;
+    /* Remove default margin */
+}
+
+.review-section::before {
+    content: '';
+    /* Pseudo-element for overlay */
+    position: absolute;
+    /* Absolute positioning */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    /* Below content */
+}
+
+.review-section h2,
+.review-section p.subtitle,
+.review-container {
+    position: relative;
+    /* Relative positioning */
+    z-index: 2;
+    /* Above overlay */
+}
+
+.review-section h2 {
+    font-size: 2.5rem;
+    /* Font size */
+    color: #fff;
+    /* White text */
+    margin-bottom: 20px;
+    /* Margin below heading */
+    font-family: 'Georgia', serif;
+    /* Serif font for headings */
+}
+
+.review-section p.subtitle {
+    font-size: 1.2rem;
+    /* Font size */
+    color: #ddd;
+    /* Light gray text */
+    margin-bottom: 60px;
+    /* Margin below subtitle */
+    font-style: italic;
+    /* Italic style */
+}
+
+.review-container {
+    display: flex;
+    /* Flexbox for reviews */
+    justify-content: center;
+    /* Center horizontally */
+    gap: 30px;
+    /* Gap between review boxes */
+    flex-wrap: wrap;
+    /* Wrap on smaller screens */
+}
+
+.review-box {
+    background: rgba(255, 255, 255, 0.9);
+    /* Semi-transparent white background */
+    padding: 20px;
+    /* Padding inside box */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    max-width: 350px;
+    /* Maximum width */
+    text-align: center;
+    /* Center text */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transition for hover */
+}
+
+.review-box:hover {
+    transform: translateY(-10px);
+    /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Stronger shadow on hover */
+}
+
+.review-box h3 {
+    font-size: 1.5rem;
+    /* Font size */
+    color: #e74c3c;
+    /* Brand color */
+    margin-bottom: 10px;
+    /* Margin below heading */
+    font-family: 'Georgia', serif;
+    /* Serif font */
+}
+
+.review-box p.location {
+    font-size: 1rem;
+    /* Font size */
+    color: #666;
+    /* Gray text */
+    margin-bottom: 20px;
+    /* Margin below location */
+    font-style: italic;
+    /* Italic style */
+}
+
+.review-box p.comment {
+    font-size: 1rem;
+    /* Font size */
+    color: #333;
+    /* Dark text */
+    line-height: 1.8;
+    /* Line height for readability */
+    font-family: 'Arial', sans-serif;
+    /* Sans-serif font */
+}
+
+.review-box p.comment::before {
+    content: "“";
+    /* Opening quote */
+    font-size: 2rem;
+    /* Larger quote size */
+    color: #e74c3c;
+    /* Brand color */
+    margin-right: 5px;
+    /* Spacing */
+}
+
+.review-box p.comment::after {
+    content: "”";
+    /* Closing quote */
+    font-size: 2rem;
+    /* Larger quote size */
+    color: #e74c3c;
+    /* Brand color */
+    margin-left: 5px;
+    /* Spacing */
+}
+
+/* About Section */
+.about-section {
+    background: #fff8f5;
+    /* Light peach background */
+    padding: 80px 20px;
+    /* Padding for section */
+    text-align: center;
+    /* Center text */
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    /* Font size */
+    color: #e74c3c;
+    /* Brand color */
+    margin-bottom: 20px;
+    /* Margin below heading */
+    font-family: 'Georgia', serif;
+    /* Serif font */
+}
+
+.about-section p {
+    font-size: 1.2rem;
+    /* Font size */
+    color: #666;
+    /* Gray text */
+    max-width: 800px;
+    /* Maximum width */
+    margin: 0 auto;
+    /* Center paragraph */
+    line-height: 1.8;
+    /* Line height for readability */
+}
+
+/* Mission Section */
+.mission-section {
+    background: #fff8f5;
+    /* Light peach background */
+    padding: 80px 20px;
+    /* Padding for section */
+    text-align: center;
+    /* Center text */
+}
+
+.mission-section h2 {
+    font-size: 2.5rem;
+    /* Font size */
+    color: #e74c3c;
+    /* Brand color */
+    margin-bottom: 20px;
+    /* Margin below heading */
+    font-family: 'Georgia', serif;
+    /* Serif font */
+}
+
+.mission-section p {
+    font-size: 1.2rem;
+    /* Font size */
+    color: #666;
+    /* Gray text */
+    max-width: 800px;
+    /* Maximum width */
+    margin: 0 auto;
+    /* Center paragraph */
+    line-height: 1.8;
+    /* Line height for readability */
+}
+
+/* Login Section */
+body.login-page {
+    background-image: url('images/bg-pic.jpg');
+    /* Background image */
+    background-size: cover;
+    /* Cover the entire section */
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* No repeat */
+    position: relative;
+    /* Relative positioning */
+    min-height: 100vh;
+    /* Full viewport height */
+}
+
+.login-section {
+    position: relative;
+    /* Relative positioning */
+    z-index: 1;
+    /* Above background */
+    display: flex;
+    /* Flexbox for centering */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    height: 100vh;
+    /* Full viewport height */
+}
+
+.login-container {
+    background-color: #fff;
+    /* White background */
+    padding: 40px;
+    /* Padding inside container */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    text-align: center;
+    /* Center text */
+    animation: fadeInUp 1s ease-in-out;
+    /* Fade and slide-up animation */
+    max-width: 400px;
+    /* Maximum width */
+    margin: 0 auto;
+    /* Center container */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+        /* Start below and transparent */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        /* End at original position and opaque */
+    }
+}
+
+.input-group {
+    margin-bottom: 20px;
+    /* Margin below each input group */
+    text-align: left;
+    /* Left-aligned labels */
+}
+
+.input-group label {
+    display: block;
+    /* Block display for labels */
+    font-size: 14px;
+    /* Font size */
+    color: #555;
+    /* Gray text */
+    margin-bottom: 5px;
+    /* Margin below label */
+}
+
+.input-group input {
+    width: 100%;
+    /* Full width */
+    padding: 10px;
+    /* Padding inside input */
+    border: 1px solid #ddd;
+    /* Light border */
+    border-radius: 5px;
+    /* Rounded corners */
+    font-size: 14px;
+    /* Font size */
+    transition: border-color 0.3s ease;
+    /* Smooth transition for focus */
+}
+
+.input-group input:focus {
+    border-color: #ff6f61;
+    /* Brand color on focus */
+    outline: none;
+    /* Remove default outline */
+}
+
+button[type="submit"] {
+    width: 100%;
+    /* Full width */
+    padding: 12px;
+    /* Padding */
+    background-color: #ff6f61;
+    /* Brand color */
+    border: none;
+    /* No border */
+    border-radius: 5px;
+    /* Rounded corners */
+    color: #fff;
+    /* White text */
+    font-size: 16px;
+    /* Font size */
+    cursor: pointer;
+    /* Pointer cursor */
+    transition: background-color 0.3s ease;
+    /* Smooth transition for hover */
+}
+
+button[type="submit"]:hover {
+    background-color: #e65a50;
+    /* Darker brand color on hover */
+}
+
+.register-link {
+    font-size: 14px;
+    /* Font size */
+    color: #666;
+    /* Gray text */
+    margin-top: 15px;
+    /* Margin above link */
+}
+
+.register-link a {
+    color: #ff6f61;
+    /* Brand color for link */
+    text-decoration: none;
+    /* No underline */
+    transition: color 0.3s ease;
+    /* Smooth transition for hover */
+}
+
+.register-link a:hover {
+    color: #e65a50;
+    /* Darker brand color on hover */
+}
+
+/* History Section */
+body.history-page {
+    background-image: url('images/bg-pic.jpg');
+    /* Background image */
+    background-size: cover;
+    /* Cover the entire section */
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* No repeat */
+    position: relative;
+    /* Relative positioning */
+    min-height: 100vh;
+    /* Full viewport height */
+}
+
+.history {
+    position: relative;
+    /* Relative positioning */
+    z-index: 1;
+    /* Above background */
+    padding: 80px 20px;
+    /* Padding for section */
+    max-width: 1200px;
+    /* Maximum width */
+    margin: 0 auto;
+    /* Center section */
+}
+
+.history h1 {
+    font-size: 56px;
+    /* Font size */
+    color: #e65a50;
+    /* Brand color */
+    margin-bottom: 40px;
+    /* Margin below heading */
+    text-shadow: 2px 2px 4px rgba(230, 90, 80, 0.3);
+    /* Subtle text shadow */
+    text-align: center;
+    /* Center text */
+}
+
+.timeline-content {
+    background-color: #fff;
+    /* White background */
+    padding: 30px;
+    /* Padding inside content */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    margin: 20px 0;
+    /* Margin above and below */
+    text-align: center;
+    /* Center text */
+}
+
+.timeline-image {
+    max-width: 250px;
+    /* Maximum image width */
+    width: 100%;
+    /* Full width within max */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 8px;
+    /* Rounded corners */
+    margin: 0 auto 20px;
+    /* Center and add margin below */
+    display: block;
+    /* Block display for centering */
+}
+
+.timeline-year {
+    font-size: 32px;
+    /* Font size */
+    color: #e65a50;
+    /* Brand color */
+    margin-bottom: 15px;
+    /* Margin below year */
+    text-align: center;
+    /* Center text */
+}
+
+.timeline-content h2 {
+    font-size: 28px;
+    /* Font size */
+    color: #333;
+    /* Dark text */
+    margin-bottom: 15px;
+    /* Margin below heading */
+}
+
+.timeline-content p {
+    font-size: 18px;
+    /* Font size */
+    color: #666;
+    /* Gray text */
+    line-height: 1.7;
+    /* Line height for readability */
+    text-align: left;
+    /* Left-aligned text */
+    max-width: 500px;
+    /* Maximum width */
+    margin: 0 auto;
+    /* Center paragraph */
+}
+
+.timeline::before {
+    content: '';
+    /* Pseudo-element for timeline line */
+    position: absolute;
+    /* Absolute positioning */
+    top: 80px;
+    /* Start below header */
+    bottom: 80px;
+    /* End above footer */
+    left: 50%;
+    /* Center horizontally */
+    width: 2px;
+    /* Line thickness */
+    background: #ff6f61;
+    /* Brand color */
+    transform: translateX(-50%);
+    /* Center the line */
+    z-index: 0;
+    /* Below content */
+}
+
+.timeline-item {
+    position: relative;
+    /* Relative positioning */
+    width: 50%;
+    /* Half width for alternating items */
+    padding: 30px 0;
+    /* Padding for item */
+    z-index: 1;
+    /* Above timeline line */
+    box-sizing: border-box;
+    /* Include padding in width */
+}
+
+.timeline-item:nth-child(odd) {
+    left: -15px;
+    /* Slight offset for odd items */
+    text-align: right;
+    /* Right-aligned text */
+    padding-right: 120px;
+    /* Padding for content */
+    transform: translateY(-15px);
+    /* Slight upward offset */
+}
+
+.timeline-item:nth-child(even) {
+    left: calc(50% + 15px);
+    /* Offset for even items */
+    text-align: left;
+    /* Left-aligned text */
+    padding-left: 120px;
+    /* Padding for content */
+    transform: translateY(15px);
+    /* Slight downward offset */
+}
+
+.timeline-item:first-child {
+    margin-top: -40px;
+    /* Adjust first item position */
+    padding-top: 40px;
+    /* Add padding to top */
+}
+
+.timeline-item:last-child {
+    margin-bottom: -40px;
+    /* Adjust last item position */
+    padding-bottom: 40px;
+    /* Add padding to bottom */
+}
+
+/* Products Section */
+body.products-page {
+    background-image: url('images/bg-pic.jpg');
+    /* Background image */
+    background-size: cover;
+    /* Cover the entire section */
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* No repeat */
+    position: relative;
+    /* Relative positioning */
+    min-height: 100vh;
+    /* Full viewport height */
+}
+
+body.products-page::before {
+    content: '';
+    /* Pseudo-element for overlay */
+    position: absolute;
+    /* Absolute positioning */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.7);
+    /* Semi-transparent overlay */
+    z-index: -1;
+    /* Below content */
+}
+
+.products-slider {
+    position: relative;
+    /* Relative positioning */
+    z-index: 1;
+    /* Above overlay */
+    padding: 50px 20px;
+    /* Padding for section */
+    text-align: center;
+    /* Center text */
+}
+
+.products-slider h1 {
+    font-size: 48px;
+    /* Font size */
+    margin-bottom: 30px;
+    /* Margin below heading */
+    color: #333;
+    /* Dark text */
+}
+
+.swiper-container {
+    width: 100%;
+    /* Full width */
+    max-width: 1200px;
+    /* Maximum width */
+    margin: 0 auto;
+    /* Center container */
+    padding: 20px;
+    /* Padding around slider */
+    overflow-x: hidden;
+}
+
+.swiper-slide {
+    position: relative;
+    /* Relative positioning */
+    border-radius: 10px;
+    /* Rounded corners */
+    overflow: hidden;
+    /* Hide overflow */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+}
+
+.swiper-slide img {
+    width: 100%;
+    /* Full width */
+    height: 500px;
+    /* Fixed height */
+    object-fit: cover;
+    /* Ensure image fits */
+    border-radius: 10px;
+    /* Rounded corners */
+}
+
+.slide-content {
+    position: absolute;
+    /* Absolute positioning */
+    bottom: 0;
+    /* Position at bottom */
+    left: 0;
+    right: 0;
+    /* Stretch across width */
+    background: rgba(0, 0, 0, 0.6);
+    /* Semi-transparent overlay */
+    color: #fff;
+    /* White text */
+    padding: 20px;
+    /* Padding inside content */
+    border-radius: 0 0 10px 10px;
+    /* Rounded bottom corners */
+    text-align: left;
+    /* Left-aligned text */
+}
+
+.slide-content h2 {
+    font-size: 24px;
+    /* Font size */
+    margin-bottom: 10px;
+    /* Margin below heading */
+}
+
+.slide-content p {
+    font-size: 16px;
+    /* Font size */
+    margin: 0;
+    /* Remove default margin */
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #ff6f61;
+    /* Brand color */
+    background: rgba(255, 255, 255, 0.8);
+    /* Semi-transparent background */
+    padding: 30px;
+    /* Padding for buttons */
+    border-radius: 50%;
+    /* Circular shape */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 24px;
+    color: #ff6f61;
+    /* Font size for arrows */
+}
+
+.swiper-pagination-bullet {
+    background: #ccc;
+    /* Default bullet color */
+    opacity: 1;
+    /* Full opacity */
+}
+
+.swiper-pagination-bullet-active {
+    background: #ff6f61;
+    /* Brand color for active bullet */
+}
+
+/* Product Cards Section */
+.products-section {
+    padding: 50px 20px;
+    /* Padding for section */
+    text-align: center;
+    /* Center text */
+}
+
+.products-section h2 {
+    font-size: 2.5rem;
+    /* Font size */
+    color: #fff;
+    /* Brand color */
+    margin-bottom: 40px;
+    /* Margin below heading */
+    font-family: 'Georgia', serif;
+    /* Serif font */
+}
+
+.products-container {
+    display: flex;
+    /* Flexbox for product cards */
+    justify-content: center;
+    /* Center horizontally */
+    gap: 30px;
+    /* Gap between cards */
+    flex-wrap: wrap;
+    /* Wrap on smaller screens */
+}
+
+.product-card {
+    background: #fff;
+    /* White background */
+    padding: 20px;
+    /* Padding inside card */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    max-width: 300px;
+    /* Maximum width */
+    text-align: center;
+    /* Center text */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transition for hover */
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Stronger shadow on hover */
+}
+
+.product-card img {
+    width: 100%;
+    /* Full width */
+    height: 200px;
+    /* Fixed height */
+    object-fit: cover;
+    /* Ensure image fits */
+    border-radius: 10px;
+    /* Rounded corners */
+    margin-bottom: 15px;
+    /* Margin below image */
+}
+
+.product-card h3 {
+    font-size: 1.5rem;
+    /* Font size */
+    color: #e74c3c;
+    /* Brand color */
+    margin-bottom: 10px;
+    /* Margin below heading */
+    font-family: 'Georgia', serif;
+    /* Serif font */
+}
+
+.product-card p.price {
+    font-size: 1.2rem;
+    /* Font size */
+    color: #333;
+    /* Dark text */
+    margin-bottom: 15px;
+    /* Margin below price */
+}
+
+.product-card button {
+    background-color: #ff6f61;
+    /* Brand color */
+    color: #fff;
+    /* White text */
+    border: none;
+    /* No border */
+    padding: 10px 20px;
+    /* Padding */
+    font-size: 1rem;
+    /* Font size */
+    cursor: pointer;
+    /* Pointer cursor */
+    border-radius: 5px;
+    /* Rounded corners */
+    transition: background-color 0.3s ease;
+    /* Smooth transition for hover */
+}
+
+.product-card button:hover {
+    background-color: #e74c3c;
+    /* Darker brand color on hover */
+}
+
+/* Contact Page Styles */
+body.contact-page {
+    background-image: url('images/bg-pic.jpg');
+    /* Background image */
+    background-size: cover;
+    /* Cover the entire section */
+    background-position: center;
+    /* Center the image */
+    min-height: 100vh;
+    /* Full viewport height */
+}
+
+.contact-card {
+    display: flex;
+    /* Flexbox for card layout */
+    max-width: 1000px;
+    /* Maximum width */
+    margin: 0 auto;
+    /* Center card */
+    background: rgba(255, 255, 255, 0.95);
+    /* Semi-transparent white background */
+    border-radius: 15px;
+    /* Rounded corners */
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    /* Subtle shadow */
+    overflow: hidden;
+    /* Hide overflow */
+    min-height: 600px;
+    /* Minimum height */
+}
+
+body.dark-mode .contact-card {
+    background: rgba(51, 51, 51, 0.95);
+    /* Dark background in dark mode */
+    color: #e0e0e0;
+    /* Light text in dark mode */
+}
+.contact-card h2 {
+    color: #e74c3c;
+}
+
+body.dark-mode .contact-card h2 {
+    color: #e74c3c;
+    /* Brand color for heading in dark mode */
+}
+
+body.dark-mode .contact-card .contact-method p,
+body.dark-mode .contact-card .account-prompt {
+    color: #ccc;
+    /* Lighter gray for secondary text in dark mode */
+}
+
+.content-section {
+    flex: 1;
+    /* Take available space */
+    padding: 50px;
+    /* Padding inside section */
+    display: flex;
+    /* Flexbox for content */
+    flex-direction: column;
+    /* Vertical layout */
+    justify-content: center;
+    /* Center vertically */
+}
+
+.image-section {
+    flex: 1;
+    /* Take available space */
+    position: relative;
+    /* Relative positioning */
+    overflow: hidden;
+    /* Hide overflow */
+}
+
+.card-image {
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    object-fit: cover;
+    /* Ensure image fits */
+    object-position: center;
+    /* Center the image */
+}
+
+h2 {
+    color: #fff;
+    /* Brand color */
+    font-size: 2.5em;
+    /* Font size */
+    margin-bottom: 30px;
+    /* Margin below heading */
+    text-align: center;
+    /* Center text */
+}
+
+.contact-info {
+    margin-bottom: 40px;
+    /* Margin below info */
+    text-align: center;
+    /* Center text */
+}
+
+.contact-method {
+    display: flex;
+    /* Flexbox for method layout */
+    align-items: center;
+    /* Center vertically */
+    gap: 15px;
+    /* Gap between icon and text */
+    margin: 20px 0;
+    /* Margin above and below */
+    justify-content: center;
+    /* Center horizontally */
+}
+
+.contact-method i {
+    font-size: 1.2em;
+    /* Font size */
+    color: #e74c3c;
+    /* Brand color */
+    width: 30px;
+    /* Fixed width */
+    text-align: center;
+    /* Center icon */
+}
+
+.contact-method p {
+    color: #666;
+    /* Gray text */
+    font-size: 1.1em;
+    /* Font size */
+    margin: 0;
+    /* Remove default margin */
+}
+.contact-form {
+    display: flex;
+    /* Flexbox for form layout */
+    flex-direction: column;
+    /* Vertical layout */
+    gap: 20px;
+    /* Gap between inputs */
+    max-width: 600px;
+    /* Maximum width */
+    margin: 0 auto;
+    /* Center form */
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    /* Full width */
+    padding: 14px;
+    /* Padding inside inputs */
+    border: 2px solid #ecf0f1;
+    /* Light border */
+    border-radius: 8px;
+    /* Rounded corners */
+    font-size: 16px;
+    /* Font size */
+    transition: all 0.3s ease;
+    /* Smooth transition for focus */
+}
+
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form select,
+body.dark-mode .contact-form textarea {
+    background: #444;
+    /* Dark background in dark mode */
+    border-color: #555;
+    /* Darker border in dark mode */
+    color: #e0e0e0;
+    /* Light text in dark mode */
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    outline: none;
+    /* Remove default outline */
+    border-color: #e74c3c;
+    /* Brand color on focus */
+    box-shadow: 0 0 8px rgba(231, 76, 60, 0.2);
+    /* Subtle shadow on focus */
+}
+
+.contact-form select {
+    appearance: none;
+    /* Remove default arrow */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237f8c8d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    /* Custom arrow */
+    background-repeat: no-repeat;
+    /* No repeat */
+    background-position: right 1rem center;
+    /* Position arrow */
+    background-size: 1em;
+    /* Arrow size */
+}
+
+.contact-form textarea {
+    resize: vertical;
+    /* Allow vertical resizing only */
+    min-height: 120px;
+    /* Minimum height */
+}
+
+.submit-button {
+    background: #e74c3c;
+    /* Brand color */
+    color: white;
+    /* White text */
+    padding: 16px 40px;
+    /* Padding */
+    border: none;
+    /* No border */
+    border-radius: 8px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Pointer cursor */
+    font-size: 1.1em;
+    /* Font size */
+    font-weight: 500;
+    /* Medium weight */
+    transition: background 0.3s ease;
+    /* Smooth transition for hover */
+    text-transform: uppercase;
+    /* Uppercase text */
+    letter-spacing: 0.5px;
+    /* Letter spacing */
+    margin-top: 15px;
+    /* Margin above button */
+}
+
+.submit-button:hover {
+    background: #c0392b;
+    /* Darker brand color on hover */
+}
+.account-prompt {
+    text-align: center;
+    color: #666;
+    margin-top: 25px;
+    font-size: 0.9em;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    /* Dark background */
+    color: #fff;
+    /* White text */
+    text-align: center;
+    /* Center text */
+    padding: 20px;
+    /* Padding */
+    width: 100%;
+    /* Full width */
+    position: relative;
+    /* Relative positioning */
+    bottom: 0;
+    /* Stick to bottom */
+    left: 0;
+    /* Align to left */
+    margin-top: 50px;
+    /* Margin above footer */
+    transition: background-color 0.3s ease;
+    /* Smooth transition for dark mode */
+    margin-top: 0;
+}
+
+/* Cart Side Panel */
+.cart-side-panel {
+    position: fixed;
+    /* Fixed positioning */
+    top: 0;
+    /* Start at top */
+    right: -400px;
+    /* Off-screen by default */
+    width: 400px;
+    /* Fixed width */
+    height: 100vh;
+    /* Full height */
+    background-color: #fff;
+    /* White background */
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    /* Left shadow */
+    transition: right 0.3s ease;
+    /* Smooth transition for opening */
+    z-index: 1001;
+    /* Above other content */
+}
+
+body.dark-mode .cart-side-panel {
+    background-color: #333;
+    /* Dark background in dark mode */
+}
+
+.cart-side-panel.open {
+    right: 0;
+    /* Slide in when open */
+}
+
+.cart-header {
+    display: flex;
+    /* Flexbox for header */
+    justify-content: space-between;
+    /* Space between title and close button */
+    align-items: center;
+    /* Center vertically */
+    padding: 20px;
+    /* Padding */
+    border-bottom: 1px solid #ddd;
+    /* Light border */
+}
+
+body.dark-mode .cart-header {
+    border-bottom: 1px solid #555;
+    /* Darker border in dark mode */
+}
+
+.cart-header h3 {
+    margin: 0;
+    /* Remove default margin */
+    font-size: 1.5rem;
+    /* Font size */
+    color: #333;
+    /* Dark text */
+}
+
+body.dark-mode .cart-header h3 {
+    color: #e0e0e0;
+    /* Light text in dark mode */
+}
+
+.close-cart-btn {
+    background: none;
+    /* No background */
+    border: none;
+    /* No border */
+    font-size: 1.5rem;
+    /* Font size */
+    cursor: pointer;
+    /* Pointer cursor */
+    color: #666;
+    /* Gray text */
+}
+
+body.dark-mode .close-cart-btn {
+    color: #e0e0e0;
+    /* Light gray in dark mode */
+}
+
+.close-cart-btn:hover {
+    color: #e74c3c;
+    /* Brand color on hover */
+}
+
+.cart-items {
+    padding: 20px;
+    /* Padding */
+    max-height: 70vh;
+    /* Maximum height with scroll */
+    overflow-y: auto;
+    /* Scroll for overflow */
+}
+
+.cart-item {
+    display: flex;
+    /* Flexbox for item layout */
+    justify-content: space-between;
+    /* Space between elements */
+    align-items: center;
+    /* Center vertically */
+    padding: 10px 0;
+    /* Padding */
+    border-bottom: 1px solid #eee;
+    /* Light border */
+}
+
+body.dark-mode .cart-item {
+    border-bottom: 1px solid #555;
+    /* Darker border in dark mode */
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+    /* Remove border from last item */
+}
+
+.cart-item img {
+    width: 50px;
+    /* Fixed width */
+    height: 50px;
+    /* Fixed height */
+    object-fit: cover;
+    /* Ensure image fits */
+    border-radius: 5px;
+    /* Rounded corners */
+}
+
+.cart-item-details {
+    flex: 1;
+    /* Take available space */
+    margin-left: 10px;
+    /* Margin from image */
+}
+
+.cart-item-details h4 {
+    margin: 0;
+    /* Remove default margin */
+    font-size: 1rem;
+    /* Font size */
+    color: #333;
+    /* Dark text */
+}
+
+body.dark-mode .cart-item-details h4 {
+    color: #e0e0e0;
+    /* Light text in dark mode */
+}
+
+.cart-item-details p {
+    margin: 5px 0;
+    /* Margin above and below */
+    font-size: 0.9rem;
+    /* Font size */
+    color: #666;
+    /* Gray text */
+}
+
+body.dark-mode .cart-item-details p {
+    color: #ccc;
+    /* Lighter gray in dark mode */
+}
+
+.cart-item-actions {
+    display: flex;
+    /* Flexbox for actions */
+    align-items: center;
+    /* Center vertically */
+    gap: 10px;
+    /* Gap between buttons */
+}
+
+.cart-item-actions button {
+    background: none;
+    /* No background */
+    border: none;
+    /* No border */
+    font-size: 1rem;
+    /* Font size */
+    cursor: pointer;
+    /* Pointer cursor */
+    color: #666;
+    /* Gray text */
+}
+
+body.dark-mode .cart-item-actions button {
+    color: #e0e0e0;
+    /* Light gray in dark mode */
+}
+
+.cart-item-actions button:hover {
+    color: #e74c3c;
+    /* Brand color on hover */
+}
+
+.cart-footer {
+    padding: 20px;
+    /* Padding */
+    border-top: 1px solid #ddd;
+    /* Light border */
+    text-align: center;
+    /* Center text */
+}
+
+body.dark-mode .cart-footer {
+    border-top: 1px solid #555;
+    /* Darker border in dark mode */
+}
+
+.total-cost {
+    font-size: 1.2rem;
+    /* Font size */
+    color: #333;
+    /* Dark text */
+    margin-bottom: 20px;
+    /* Margin below total */
+}
+
+body.dark-mode .total-cost {
+    color: #e0e0e0;
+    /* Light text in dark mode */
+}
+
+.checkout-btn {
+    background-color: #ff6f61;
+    /* Brand color */
+    color: #fff;
+    /* White text */
+    border: none;
+    /* No border */
+    padding: 10px 20px;
+    /* Padding */
+    font-size: 1rem;
+    /* Font size */
+    cursor: pointer;
+    /* Pointer cursor */
+    border-radius: 5px;
+    /* Rounded corners */
+    transition: background-color 0.3s ease;
+    /* Smooth transition for hover */
+}
+
+.checkout-btn:hover {
+    background-color: #e74c3c;
+    /* Darker brand color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        padding: 15px 20px;
+        /* Adjusted padding for small screens */
+        flex-wrap: wrap;
+        /* Wrap items on small screens */
+        gap: 15px;
+        /* Reduced gap */
+    }
+
+    .tap-menu {
+        display: none;
+        /* Hide menu on small screens */
+    }
+
+    .contact-card {
+        flex-direction: column;
+        /* Stack sections vertically */
+        min-height: auto;
+        /* Remove minimum height */
+    }
+    
+    .image-section {
+        height: 300px;
+        /* Fixed height for image */
+    }
+    
+    .content-section {
+        padding: 30px;
+        /* Reduced padding */
+    }
+
+    .contact-method {
+        gap: 12px;
+        /* Reduced gap */
+    }
+    
+    .contact-method i {
+        font-size: 1.1em;
+        /* Reduced icon size */
+    }
+    
+    .contact-method p {
+        font-size: 1em;
+        /* Reduced text size */
+    }
+
+    .submit-button {
+        width: 100%;
+        /* Full width */
+        padding: 16px;
+        /* Adjusted padding */
+    }
+
+    .products-container {
+        gap: 20px;
+        /* Reduced gap */
+    }
+
+    .product-card {
+        max-width: 100%;
+        /* Full width on small screens */
+
+    }
+
+}
+
+/* Blogs Page Styles */
+body.blogs-page {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/bg-pic.jpg'); /* background image */
+    background-size: cover; /* Covers the entire page */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Image stays fixed while scrolling */
+    min-height: 100vh; /* Ensures full page coverage */
+}
+
+.blog-posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 20px;
+}
+/* Blog Header */
+.blog-header {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background-color: transparent; /* Ensure no background color */
+}
+
+.blog-header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background-color: transparent; /* Ensure no background color */
+}
+        /* Blog Posts Section */
+        .blog-posts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 40px;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        .blog-post {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px; /* Fixed width for the box */
+            transition: transform 0.3s ease;
+        }
+
+.blog-post:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.blog-post img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0; /* Rounded corners at the top */
+}
+
+.blog-post-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.blog-post-content h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.blog-post-content p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+.blog-post-content a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.blog-post-content a:hover {
+    text-decoration: underline;
+}
+.read-more {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: #e74c3c;
+}
+.confirmation-message {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #d4edda; /* Light green background */
+    color: #155724; /* Dark green text */
+    border: 1px solid #c3e6cb; /* Green border */
+    border-radius: 5px;
+    text-align: center;
+}
+.error-message {
+    color: red;
+    font-size: 0.8em; /* Smaller font size */
+    margin-top: 5px;
+    display: none; /* Hidden by default */
+}
+/* Checkout Modal Styles */
+.checkout-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.checkout-modal-content {
+    background-color: #fff9f0; /* Light cream background */
+    margin: 5% auto;
+    padding: 25px;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    color: #5d4037; /* Dark brown text */
+}
+
+.close-checkout-modal {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #6d4c41; /* Medium brown */
+    cursor: pointer;
+}
+
+.close-checkout-modal:hover {
+    color: #3e2723; /* Darker brown */
+}
+
+.checkout-summary {
+    background-color: #efebe9; /* Light brown background */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.checkout-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #d7ccc8; /* Light brown divider */
+}
+
+.checkout-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+.checkout-item h4 {
+    margin: 0 0 5px 0;
+    color: #4e342e; /* Dark brown */
+}
+
+.checkout-total {
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: right;
+    margin-top: 15px;
+    color: #3e2723; /* Darkest brown */
+}
+
+#checkoutForm .input-group {
+    margin-bottom: 15px;
+}
+
+#checkoutForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+#checkoutForm input,
+#checkoutForm textarea,
+#checkoutForm select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d7ccc8; /* Light brown border */
+    border-radius: 5px;
+    background-color: #fff;
+    font-family: inherit;
+}
+
+#checkoutForm textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.submit-order-btn {
+    background-color: #8d6e63; /* Medium brown */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.submit-order-btn:hover {
+    background-color: #6d4c41; /* Darker brown */
+}
+.checkout-modal-content h2 {
+    color: #ff6f61; /* Coral color for the heading */
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+/* Keep all your existing checkout modal styles below */
+.checkout-modal {
+    display: none;
+    position: fixed;
+    /* ... rest of your existing styles ... */
+}
+/* New Cake Button Styles */
+.new-cake-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+}
+
+.new-cake-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background-color: #ff6f61;
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.new-cake-link:hover {
+    background-color: #e05a50;
+    transform: scale(1.1);
+}
+
+.spark-icon {
+    font-size: 1.8em;
+    margin-right: 5px;
+}
+
+/* Cake Game Container */
+.cake-builder-game {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff9f0;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.game-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.game-header h1 {
+    color: #ff6f61;
+    font-size: 2.2em;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #5d4037;
+    font-size: 1.1em;
+}
+
+/* Cake Display Area */
+.cake-display-area {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 20px;
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.cake-stand {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.cake-base {
+    width: 200px;
+    height: 120px;
+    background-color: #5c3a21; /* chocolate */
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.cake-frosting {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    background-color: #fffaf0; /* cream */
+    border-radius: 10px 10px 0 0;
+    bottom: 0;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+/* Ingredients Panel */
+.ingredients-panel {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.ingredient-category {
+    display: none;
+}
+
+.ingredient-category.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.ingredient-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.ingredient-option {
+    background: white;
+    border: 2px solid #d7ccc8;
+    border-radius: 10px;
+    padding: 15px;
+    width: 120px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ingredient-option:hover, .ingredient-option.active {
+    border-color: #ff6f61;
+    background-color: #fff0f0;
+    transform: translateY(-5px);
+}
+
+.option-icon {
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+.option-label {
+    color: #5d4037;
+    font-weight: 500;
+}
+
+/* Game Controls */
+.game-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.control-btn {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.control-btn:hover {
+    background-color: #e05a50;
+    transform: scale(1.05);
+}
+
+.progress-indicator {
+    font-size: 1.2em;
+    color: #5d4037;
+}
+
+/* Price Display */
+.price-display {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #5d4037;
+    margin-top: 20px;
+}
+
+.add-to-cart-btn {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 20px;
+    transition: all 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #e05a50;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 111, 97, 0.3);
+}
+/* Add this to your CSS */
+body.cake-game-page {
+    background-image: url('images/bg-pic.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.cake-game-container {
+    background-color: rgba(255, 249, 240, 0.9); /* Semi-transparent version of your cream */
+    /* Rest of your existing styles */
+}
+
+/* Dark mode background */
+body.dark-mode.cake-game-page {
+    background-image: url('images/bg-pic.jpg');
+    background-color: rgba(0, 0, 0, 0.7);
+    background-blend-mode: overlay;
+}
+/* Cake Game Styles */
+.cake-display {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.ingredient-selector {
+    background-color: #efebe9;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.ingredient-category {
+    margin-bottom: 15px;
+}
+
+.ingredient-category h3 {
+    color: #5d4037;
+    margin-bottom: 10px;
+}
+
+.ingredient-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.ingredient-btn {
+    background-color: white;
+    border: 2px solid #d7ccc8;
+    border-radius: 20px;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ingredient-btn:hover, .ingredient-btn.active {
+    background-color: #ff6f61;
+    border-color: #ff6f61;
+    color: white;
+}
+
+.game-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.price-display {
+    font-size: 1.2em;
+    color: #5d4037;
+}
+
+.price-display span:last-child {
+    font-weight: bold;
+    color: #ff6f61;
+}
+
+.add-to-cart-btn {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #e05a50;
+    transform: scale(1.05);
+}
+        /* Game-specific styles that match your site */
+        .cake-game-container {
+            background-color: #fff9f0; /* Your cream background */
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 900px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .game-header h1 {
+            color: #5d4037; /* Your dark brown text */
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .game-header p {
+            color: #6d4c41; /* Your medium brown text */
+            text-align: center;
+        }
+        .ingredient-panel {
+            background-color: #efebe9; /* Your light brown */
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        .ingredient-btn {
+            background-color: white;
+            border: 2px solid #d7ccc8; /* Your light brown border */
+            border-radius: 20px;
+            padding: 8px 15px;
+            margin: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .ingredient-btn:hover, .ingredient-btn.active {
+            border-color: #ff6f61; /* Your coral color */
+            background-color: #ff6f61;
+            color: white;
+        }
+        #cakeCanvas {
+            display: block;
+            margin: 0 auto;
+            background-color: #f5f5f5;
+            border-radius: 10px;
+        }
+        /* Checkout Modal Styles */
+.checkout-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    overflow-y: auto;
+}
+
+.checkout-modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.close-checkout-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-checkout-modal:hover {
+    color: black;
+}
+
+.checkout-summary {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.checkout-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.checkout-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 15px;
+    border-radius: 4px;
+}
+
+.checkout-total {
+    font-weight: bold;
+    text-align: right;
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.submit-order-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.submit-order-btn:hover {
+    background-color: #45a049;
+}
+
+  
